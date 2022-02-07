@@ -88,11 +88,11 @@
     &__item{
         margin: 0 20px;
         font-size: $font-size-4;
-        line-height: 2;
+        line-height: 1;
         font-weight: 500;
         color: $color-accent-1;
         text-decoration: none;
-        letter-spacing: 1px;
+        // letter-spacing: 1px;
         transition: color 0.3s ease;
 
         &:hover{
@@ -118,8 +118,8 @@
         justify-content: center;
         font-size: $font-size-5;
         font-weight: 600;
-        background-color: $color-gray-1;
-        border: 1px solid $color-gray-4;
+        background-color: $color-gray;
+        border: 1px solid $color-gray-2;
         color: $color-button-primary;
         padding: 7px 15px 9px 20px;
         border-radius: 5px;
@@ -127,7 +127,7 @@
         margin-right: 10px;
 
         &:hover{
-            background-color: $color-gray-2;
+            background-color: $color-gray-1;
             
         }
     }
