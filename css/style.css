@@ -57,6 +57,12 @@ a {
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @font-face {
   font-family: "StabilGrotesk";
   src: url("../../assets/StabilGrotesk-Regular.woff");
@@ -96,7 +102,7 @@ i {
   background-color: #ff2753;
   color: #fff;
   padding: 10px 22px 12px;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   line-height: 1;
   font-weight: 600;
   border-radius: 5px;
@@ -106,7 +112,7 @@ i {
   box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.2);
 }
 .button__button {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
 }
 
 .site {
@@ -212,7 +218,7 @@ i {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 600;
   background-color: #fafafa;
   border: 1px solid #aeaeae;
@@ -301,7 +307,7 @@ i {
   }
 }
 .hero__description {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #aeaeae;
   margin-bottom: 35px;
@@ -317,6 +323,12 @@ i {
   display: inline-flex;
   font-size: 1rem;
 }
+@media (max-width: 768px) {
+  .hero__button {
+    display: flex;
+    margin: 0 auto;
+  }
+}
 .hero__link {
   display: inline-flex;
   font-size: 1rem;
@@ -326,16 +338,30 @@ i {
   border-bottom: 1px solid #59a1a2;
   line-height: 1.3;
 }
+@media (max-width: 768px) {
+  .hero__link {
+    display: block;
+    margin: 10px auto;
+  }
+}
 
 .img-dummy {
   background-color: #aeaeae;
   height: 700px;
   width: 100%;
 }
+.img-dummy--small {
+  height: 400px;
+}
+@media (max-width: 768px) {
+  .img-dummy {
+    height: 300px;
+  }
+}
 
 .quote {
   max-width: 600px;
-  margin: 0 auto 50px;
+  margin: 50px auto;
   text-align: center;
 }
 .quote__heading {
@@ -351,6 +377,148 @@ i {
   font-size: 1rem;
   font-weight: 500;
   color: #3c4664;
+}
+
+.customer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.customer__heading {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #151515;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.customer__footer {
+  font-size: 0.875rem;
+  color: #7b7b7b;
+  text-align: center;
+  font-weight: 500;
+}
+.customer__list {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .customer__list {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+.customer__list li {
+  margin: 20px 40px;
+}
+.customer__list img {
+  max-height: 50px;
+}
+
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px auto;
+  width: 100%;
+}
+.post__image {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 60%;
+}
+@media (max-width: 992px) {
+  .post__image {
+    flex: 0 0 100%;
+  }
+}
+@media (max-width: 992px) {
+  .post__image--order-1 {
+    order: -1;
+  }
+}
+.post__text {
+  width: 800px;
+  flex: 0 0 40%;
+}
+@media (max-width: 992px) {
+  .post__text {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+}
+.post__heading {
+  font-size: 1.75rem;
+  color: #151515;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 35px;
+}
+.post__description {
+  font-size: 1rem;
+  color: #7b7b7b;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.post__artist_details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+.post__artist_details span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.post__link {
+  display: block;
+  font-size: 0.875rem;
+  color: #ff2753;
+  font-weight: 600;
+}
+.post__image_artist {
+  font-size: 0.75rem;
+  color: #aeaeae;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.values__heading {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #151515;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 0 auto 30px;
+  max-width: 500px;
+}
+.values__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.values__list_item {
+  display: flex;
+  align-content: center;
+  font-size: 1.125rem;
+  color: #aeaeae;
+  font-weight: 500;
+  margin: 0 10px;
+}
+.values__list_item img {
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
