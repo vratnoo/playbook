@@ -328,6 +328,7 @@
 }
 
 
+<<<<<<< HEAD
 .pr{
     display: flex;
     max-width: 800px;
@@ -390,4 +391,31 @@
         }
     }
 
+=======
+
+.connect-box{
+    margin: 100px auto;
+    text-align: center;
+
+    &__title{
+        font-size: $font-size-1;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        
+
+    }
+
+    &__desc{
+        font-size: $font-size-2;
+        margin-bottom: 15px;
+    }
+
+    &__link{
+        display: inline-flex;
+        font-size: 1rem;
+        margin-top: 10px;
+
+    }
+>>>>>>> edf5f5b39c0311152d42919bcb63840e1f54201f
 }
