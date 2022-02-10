@@ -51,6 +51,16 @@
         }
     }
 
+    &__media{
+        height: 700px;
+        width: 100%;
+        object-fit: cover;
+
+        @include md{
+            height: auto;
+        }
+    }
+
     &__title{
         font-size: $font-size-title;
         margin-top: 80px;
@@ -304,7 +314,6 @@
     &__list{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 50px;
     }
     &__list_item{
         display: flex;
@@ -325,10 +334,20 @@
         margin-right: 10px;
     }
 
+    &__media{
+        height: 420px;
+        width: 100%;
+        margin-top: 50px;
+
+
+        @include md{
+            height: auto;
+        }
+    }
+
 }
 
 
-<<<<<<< HEAD
 .pr{
     display: flex;
     max-width: 800px;
@@ -391,8 +410,7 @@
         }
     }
 
-=======
-
+}
 .connect-box{
     margin: 100px auto;
     text-align: center;
@@ -417,5 +435,4 @@
         margin-top: 10px;
 
     }
->>>>>>> edf5f5b39c0311152d42919bcb63840e1f54201f
 }
