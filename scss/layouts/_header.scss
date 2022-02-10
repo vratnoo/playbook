@@ -47,10 +47,11 @@
 .logo{
     display: inline-block;
     margin-right: 12px;
+    height: 40px;
 
     &__img{
-        max-height: 40px;
-        height: auto;
+        // max-height: 40px;
+        width: unset;
     }
 
 }
@@ -62,7 +63,7 @@
     height: 40%;
     margin: 0 15px;
     width: 1px;
-    background-color: $color-gray-5;
+    background-color: $color-gray-1;
 
     @include sm{
         display: none;
@@ -141,6 +142,7 @@
 
     &__button{
         font-size: 15px;
+        padding: 5px 10px;
         
     }
 
@@ -153,12 +155,15 @@
     // position: absolute;
     position: fixed;
     display: flex;
+    visibility: hidden;
     flex-direction: column;
     top: 0;
     left: 0;
     background-color: $bg-white;
     height: 100vh;
     width: 250px;
+    transform: translateX(-250px);
+    transition: all .4s ease-in-out;
     z-index: 1000;
     overflow-y: scroll;
     padding: 20px 15px 15px 30px;
@@ -168,17 +173,23 @@
         justify-content: flex-end;
         align-items: center;
         color: $color-gray-5;
+        cursor: pointer;
 
         svg{
             height: 16px;
             width: 16px;
             // margin-right: 10px;
         }
+
+        &:hover{
+            color: $color-gray-2;
+        }
     }
     &__list{
         display: flex;
         flex-direction: column;
         padding: 0 20px;
+        
     }
 
     &__item{
@@ -191,5 +202,61 @@
         &:hover{
             color: $color-gray-5;
         }
+    }
+
+    &--active{
+       
+        .side-menu{
+            visibility: visible;
+            transform: translateX(0);
+            transition: transform .4s ease-in-out;
+
+        }
+
+        .dimmer{
+            display: block;
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+
+    }
+}
+
+.dimmer{
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all .4s ease-in-out;
+    z-index: 99;
+}
+.burger{
+    display:none;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+
+    @include lg{
+         display: flex;
+    }
+
+    &::before{
+        content: "";
+        display: block;
+        height: 5px;
+        width: 12px;
+        border-top: 2px solid $color-gray-5;
+        border-bottom: 2px solid $color-gray-5;
     }
 }
