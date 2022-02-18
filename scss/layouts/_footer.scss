@@ -141,10 +141,11 @@
         width: 88px;
         display: block;
         position: absolute;
+        margin-bottom: -10px;
         bottom: 0px;
         left: 50%;
         z-index: 1000;
-        transform: translateX(-50%);
+        // transform: translateX(-50%);
         transform-origin: bottom center;
         animation: waving 1.5s alternate  ease infinite;
     }
