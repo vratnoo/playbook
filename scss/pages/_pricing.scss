@@ -9,6 +9,10 @@
         text-align: center;
         margin-bottom: 100px;
 
+        @include md{
+            max-width: 100%;
+        }
+
         &-desc{
             color: $color-button-primary;
             font-size: $font-size-3;
@@ -33,6 +37,11 @@
      &__row{
          display: flex;
          padding: 0 65px;
+         flex-wrap: wrap;
+
+         @include md{
+            padding: 0;
+         }
      }
      &__column{
          flex: 1 1 0;
@@ -48,6 +57,13 @@
              border-radius: 5px;
          }
 
+         @include md{
+             flex: 1 1 100%;
+             margin-bottom: 80px;
+             background-color: $color-gray-1;
+            //  align-items: flex-start;
+         }
+
          
      }
      
@@ -55,6 +71,12 @@
 
 .price{
     min-height: 300px;
+    margin-bottom: 50px;
+
+    @include md{
+        min-height: auto;
+    }
+
     &__countdown{
         display: flex;
         justify-content: center;
@@ -147,6 +169,11 @@
         min-width: 33.33%;
         padding: 0 15px;
         margin: 30px 0;
+
+        @include md{
+            flex: 1 1 100%;
+        }
+
     }
     &__title{
         font-size: $font-size-3;

@@ -1277,6 +1277,11 @@ em {
   text-align: center;
   margin-bottom: 100px;
 }
+@media (max-width: 768px) {
+  .pricing__header {
+    max-width: 100%;
+  }
+}
 .pricing__header-desc {
   color: #ff2753;
   font-size: 1.125rem;
@@ -1298,6 +1303,12 @@ em {
 .feature__row {
   display: flex;
   padding: 0 65px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .feature__row {
+    padding: 0;
+  }
 }
 .feature__column {
   flex: 1 1 0;
@@ -1312,9 +1323,22 @@ em {
   border: 2px solid #3EC3CC;
   border-radius: 5px;
 }
+@media (max-width: 768px) {
+  .feature__column {
+    flex: 1 1 100%;
+    margin-bottom: 80px;
+    background-color: #e1e1e1;
+  }
+}
 
 .price {
   min-height: 300px;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .price {
+    min-height: auto;
+  }
 }
 .price__countdown {
   display: flex;
@@ -1395,6 +1419,11 @@ em {
   min-width: 33.33%;
   padding: 0 15px;
   margin: 30px 0;
+}
+@media (max-width: 768px) {
+  .faq__column {
+    flex: 1 1 100%;
+  }
 }
 .faq__title {
   font-size: 1.125rem;
